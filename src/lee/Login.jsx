@@ -1,6 +1,49 @@
 import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
+const Login = () => {
+  const navigate = useNavigate();
+
+  function handleClick() {
+    navigate("/");
+  }
+
+  return (
+    <Section>
+      <Title>로그인</Title>
+      <Form action="/" method="POST">
+        <Input
+          type="text"
+          id="id"
+          name="id"
+          required
+          placeholder="아이디를 입력해주세요"
+        />
+        <Input
+          type="password"
+          id="id"
+          name="password"
+          minLength={"6"}
+          maxLength={"12"}
+          required
+          placeholder="비밀번호를 입력해주세요"
+        />
+        <Div>
+          <Link to="/">아이디 찾기</Link>
+          <span></span>
+          <Link to="/">비밀번호 찾기</Link>
+        </Div>
+        <Button type="submit" bgColor={"#5d4436"}>
+          <span>로그인</span>
+        </Button>
+        <Button type="button" bgColor={"#A07C68"} onClick={handleClick}>
+          <span>회원가입</span>
+        </Button>
+      </Form>
+    </Section>
+  );
+};
+
 const Section = styled.section`
   margin: auto;
   width: 340px;
@@ -58,48 +101,5 @@ const Button = styled.button`
 //   text-align: center;
 //   line-height: 50px;
 // `;
-
-const Login = () => {
-  const navigate = useNavigate();
-
-  function handleClick() {
-    navigate("/");
-  }
-
-  return (
-    <Section>
-      <Title>로그인</Title>
-      <Form action="/" method="POST">
-        <Input
-          type="text"
-          id="id"
-          name="id"
-          required
-          placeholder="아이디를 입력해주세요"
-        />
-        <Input
-          type="password"
-          id="id"
-          name="password"
-          minLength={"6"}
-          maxLength={"12"}
-          required
-          placeholder="비밀번호를 입력해주세요"
-        />
-        <Div>
-          <Link to="/">아이디 찾기</Link>
-          <span></span>
-          <Link to="/">비밀번호 찾기</Link>
-        </Div>
-        <Button type="submit" bgColor={"#5d4436"}>
-          <span>로그인</span>
-        </Button>
-        <Button type="button" bgColor={"#A07C68"} onClick={handleClick}>
-          <span>회원가입</span>
-        </Button>
-      </Form>
-    </Section>
-  );
-};
 
 export default Login;
