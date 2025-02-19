@@ -21,7 +21,7 @@ const Home = () => {
         <Link to="/">현지</Link>
       </li>
       <li>
-        <Link to="/Login/Page">정현</Link>
+        <Link to="/Main/Page">정현</Link>
       </li>
     </Flex>
   );
