@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 const Login = () => {
   const navigate = useNavigate();
+  const [Id, setId] = useState();
 
   function handleClick() {
     navigate("/");
@@ -13,11 +15,16 @@ const Login = () => {
       <Title>로그인</Title>
       <Form action="/" method="POST">
         <Input
+          value={Id}
           type="text"
           id="id"
           name="id"
           required
           placeholder="아이디를 입력해주세요"
+          onChange={(e) => {
+            setId(e.target.value);
+            console.log("아이디", e.target.value);
+          }}
         />
         <Input
           type="password"
@@ -33,10 +40,14 @@ const Login = () => {
           <span></span>
           <Link to="/">비밀번호 찾기</Link>
         </Div>
-        <Button type="submit" bgColor={"#5d4436"}>
+        <Button type="submit" style={{ backgroundColor: "#5d4436" }}>
           <span>로그인</span>
         </Button>
-        <Button type="button" bgColor={"#A07C68"} onClick={handleClick}>
+        <Button
+          type="button"
+          style={{ backgroundColor: "#A07C68" }}
+          onClick={handleClick}
+        >
           <span>회원가입</span>
         </Button>
       </Form>
