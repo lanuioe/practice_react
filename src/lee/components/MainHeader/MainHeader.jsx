@@ -1,13 +1,30 @@
+import LogoSection from "../LogoSection/LogoSection";
+import styled from "styled-components";
+import SearchInput from "../SearchInput/SearchInput";
+import HeaderIcon from "../HeaderIcon/HeaderIcon";
+
 function MainHeader() {
   return (
     <>
-      <div style={{ display: "flex" }}>
-        <img src="/assets/mainLogo.svg" alt="마켓칼리 로고" />
-        <div>마켓칼리</div>
-        <div>뷰티칼리</div>
-      </div>
+      <HeaderWrapper>
+        <LogoWrapper>
+          <LogoSection />
+        </LogoWrapper>
+        <SearchInput />
+        <HeaderIcon />
+      </HeaderWrapper>
     </>
   );
 }
+
+const HeaderWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const LogoWrapper = styled.div`
+  display: flex;
+  gap: 12px;
+`;
 
 export default MainHeader;
