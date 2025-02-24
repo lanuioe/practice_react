@@ -8,13 +8,16 @@ function SignUpSection() {
       <Divider></Divider>
       <Link to="/Login/Page">로그인</Link>
       <Divider></Divider>
-      <p>고객센터</p>
+      <p>
+        고객센터 <img src="/assets/HeaderIcon/ic-down.svg" alt="고객센터" />
+      </p>
     </Section>
   );
 }
 
 const Section = styled.div`
   display: flex;
+  justify-content: end;
   max-width: 1050px;
   margin-bottom: 21px;
 `;
