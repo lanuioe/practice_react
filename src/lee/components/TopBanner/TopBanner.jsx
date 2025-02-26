@@ -1,20 +1,29 @@
+import { useState } from "react";
 import styled from "styled-components";
 
 function TopBanner() {
+  const [isVisible, setIsVisible] = useState(true);
+
   return (
-    <>
-      <Banner>
-        지금 가입하고, <b>최대 1만원 할인 쿠폰</b> 받아가세요!
-        <DeleteButton>
-          <img
-            src="/assets/HeaderIcon/ic-delete.svg"
-            width={20}
-            height={20}
-            alt="topBannerCloseBtn"
-          />
-        </DeleteButton>
-      </Banner>
-    </>
+    isVisible && (
+      <>
+        <Banner>
+          지금 가입하고, <b>최대 1만원 할인 쿠폰</b> 받아가세요!
+          <DeleteButton
+            onClick={() => {
+              setIsVisible(false);
+            }}
+          >
+            <img
+              src="/assets/HeaderIcon/ic-delete.svg"
+              width={20}
+              height={20}
+              alt="topBannerCloseBtn"
+            />
+          </DeleteButton>
+        </Banner>
+      </>
+    )
   );
 }
 
