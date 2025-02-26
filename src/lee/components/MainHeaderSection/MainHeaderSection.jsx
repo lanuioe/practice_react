@@ -5,7 +5,7 @@ import HeaderIcon from "../HeaderIcon/HeaderIcon";
 import LoginBar from "../LoginBar/LoginBar";
 import TopBanner from "../TopBanner/TopBanner";
 
-function MainHeader() {
+function MainHeaderSection() {
   return (
     <>
       <TopBanner />
@@ -31,4 +31,4 @@ const LogoWrapper = styled.div`
   gap: 12px;
 `;
 
-export default MainHeader;
+export default MainHeaderSection;
