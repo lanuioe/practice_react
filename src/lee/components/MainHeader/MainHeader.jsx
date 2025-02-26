@@ -2,12 +2,14 @@ import LogoSection from "../LogoSection/LogoSection";
 import styled from "styled-components";
 import SearchInput from "../SearchInput/SearchInput";
 import HeaderIcon from "../HeaderIcon/HeaderIcon";
-import SignUpSection from "../SignUpSection/SignUpSection";
+import LoginBar from "../LoginBar/LoginBar";
+import TopBanner from "../TopBanner/TopBanner";
 
 function MainHeader() {
   return (
     <>
-      <SignUpSection />
+      <TopBanner />
+      <LoginBar />
       <HeaderWrapper>
         <LogoWrapper>
           <LogoSection />
