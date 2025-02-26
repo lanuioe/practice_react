@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-function SignUpSection() {
+function LoginBar() {
   return (
     <Section>
       <p>회원가입</p>
@@ -18,7 +18,7 @@ function SignUpSection() {
 const Section = styled.div`
   display: flex;
   justify-content: end;
-  max-width: 1050px;
+  min-width: 1050px;
   margin-bottom: 21px;
 `;
 
@@ -28,4 +28,4 @@ const Divider = styled.div`
   margin: 0 12px;
 `;
 
-export default SignUpSection;
+export default LoginBar;
