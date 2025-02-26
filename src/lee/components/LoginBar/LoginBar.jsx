@@ -18,7 +18,6 @@ function LoginBar() {
 const Section = styled.div`
   display: flex;
   justify-content: end;
-  min-width: 1050px;
   margin-bottom: 21px;
 `;
 
