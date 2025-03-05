@@ -1,9 +1,11 @@
-import MainHeader from "../../components/MainHeader/MainHeader";
+import MainHeaderSection from "../../components/MainHeaderSection/MainHeaderSection";
+import MainSection from "../../components/MainSection/MainSection";
 
 function MainPage() {
   return (
     <div>
-      <MainHeader />
+      <MainHeaderSection />
+      <MainSection />
     </div>
   );
 }
